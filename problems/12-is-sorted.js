@@ -13,14 +13,14 @@ isSorted([5, 4, 3, 2, 1]); // false
 
 function isSorted(arr) {
   if (arr.length === 1) return true
-  
+
   // if condition: arr + 1 === currNum + 1?
   // arr[arr + 1] === arr[0]? if true arr.slice(1)
   if (arr[1] > arr[0]) {
     let restOfArr = arr.slice(1)
     return isSorted(restOfArr)
   }
-  
+
   return false
 }
 console.log(isSorted([1, 2, 3, 4, 5])); // true
